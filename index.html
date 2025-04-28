@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mema holdings limited</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles/navbar.css">
+<link rel="stylesheet" href="styles/animations.css">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/wave-animation.css">
+<script src="js/scroll-animations.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+	
+    <body>
+	<div id="loading-overlay">
+  <div class="spinner">
+    <div class="pulse red"></div>
+    <div class="pulse white"></div>
+    <div class="pulse red"></div>
+  </div>
+</div>
+        <!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo-container">
+    <img src="images/vodacom-logo.png" alt="Vodacom Logo" class="logo">
+    <div class="company-name">
+      <span class="mema">MEMA</span>
+      <span class="holdings">HOLDINGS</span>
+    </div>
+  </div>
+                <nav class="desktop-nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="products.html" class="nav-link">About Products</a>
+                        </li>
+                        <li>
+                            <a href="#packages" class="nav-link">Packages</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                        <li>
+                            <a href="speedtest.html" class="nav-link">Speed Test</a>
+                        </li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <button class="login-button">
+                            <i class="fas fa-user"></i>
+                            <span>Login</span>
+                        </button>
+                        <button class="cart-button">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <button class="language-button">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-language">EN</span>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option active" data-lang="en">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="sw">
+                                <img src="https://flagcdn.com/w20/tz.png" alt="Kiswahili">
+                                <span>Kiswahili</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="images/vodacom-logo.png" alt="Vodacom Logo" class="logo">
+                <button class="close-menu-button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li>
+                        <a href="#products" class="mobile-nav-link">Products</a>
+                    </li>
+                    <li>
+                        <a href="#packages" class="mobile-nav-link">Packages</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="mobile-nav-link">Contact</a>
+                    </li>
+                    <li>
+                        <a href="speedtest.html" class="mobile-nav-link">Speed Test</a>
+                    </li>
+                </ul>
+                <div class="mobile-buttons">
+                    <button class="login-button-mobile">
+                        <i class="fas fa-user"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="cart-button-mobile">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button class="language-button-mobile">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-language-mobile">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-language-options">
+                        <div class="mobile-language-option active" data-lang="en">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                            <span>English</span>
+                        </div>
+                        <div class="mobile-language-option" data-lang="sw">
+                            <img src="https://flagcdn.com/w20/tz.png" alt="Kiswahili">
+                            <span>Kiswahili</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Login Modal -->
+        <div class="modal login-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Login to Your Account</h2>
+                    <p>Enter your credentials to access your Mema account.</p>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <p>Review your items before checkout</p>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-body">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button class="btn btn-primary">Browse Products</button>
+                </div>
+                <div class="cart-items-container" style="display: none;">
+                    <div class="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                    </div>
+                    <div class="cart-summary">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span class="total-amount">0 TZS</span>
+                        </div>
+                        <div class="checkout-form">
+                            <h3>Complete Your Order</h3>
+                            <form id="checkout-form">
+                                <div class="form-group">
+                                    <label for="checkout-name">Full Name</label>
+                                    <input type="text" id="checkout-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-location">Location</label>
+                                    <input type="text" id="checkout-location" name="location" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-phone">Phone Number</label>
+                                    <input type="tel" id="checkout-phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout-email">Email</label>
+                                    <input type="email" id="checkout-email" name="email" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary checkout-btn">Complete Checkout
+          </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video Modal -->
+        <div class="video-modal">
+            <div class="video-modal-content">
+                <button class="close-video-modal">&times;</button>
+                <div class="video-modal-header">
+                    <h2>Router Unboxing</h2>
+                </div>
+                <div class="video-modal-body">
+                    <div class="video-wrapper">
+                        <iframe id="youtube-iframe" src="/placeholder.svg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notification Toast -->
+        <div class="toast-container">
+        <!-- Notifications will be added here dynamically -->
+        </div>
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <!-- 5G Speed Indicator -->
+                            <div class="speed-indicator ">
+                                <div class="speed-indicator-title">Experience Lightning-Fast 5G Speeds</div>
+                                <div class="speed-meter-container">
+                                    <div class="modern-speed-meter">
+                                        <div class="modern-speed-bar"></div>
+                                    </div>
+                                    <div class="speed-value">350 Mbps</div>
+                                    <div class="speed-labels">
+                                        <span class="speed-label-4g">
+                                            4G <span class="speed-sublabel">Up to 20 Mbps</span>
+                                        </span>
+                                        <span class="speed-label-5g">
+                                            5G <span class="speed-sublabel">Up to 350 Mbps</span>
+                                        </span>
+                                    </div>
+                                    <div class="speed-comparison">
+                                        <div class="speed-comparison-item">
+                                            <i class="fas fa-film"></i>
+                                            <span>
+                                                4K Movie: <span class="download-time">2 min</span>
+                                            </span>
+                                        </div>
+                                        <div class="speed-comparison-item">
+                                            <i class="fas fa-gamepad"></i>
+                                            <span>
+                                                Game Download: <span class="download-time">5 min</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1>Unlimited Internet Service for Your Home & Business</h1>
+                            <p>Experience Contract Post-paid lightning-fast 5G connectivity with Vodacom Tanzania. Play games, watch TV, and enjoy unlimited entertainment at affordable prices.</p>
+                            <div class="hero-buttons">
+                                <a href="#packages" class="btn btn-light">
+                                    Explore Packages
+            <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="#contact" class="btn btn-outline">Contact Sales
+          </a>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="images/atel-router.png" alt="Atel DW516 5G CPE" class="floating">
+                            <div class="price-tag">Only 240,000 TZS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wave-divider">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <defs>
+                            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1"/>
+                                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1"/>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#wave-gradient)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    </svg>
+                </div>
+            </section>
+            <!-- Featured Product -->
+            <section class="featured-product reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Featured Product</h2>
+                        <p>Experience the future of connectivity with our premium 5G router</p>
+                    </div>
+                    <div class="product-showcase">
+                        <div class="product-details">
+                            <h3>Atel DW516 5G CPE</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"></span>
+                                    Ultra-fast 5G connectivity
+                                </li>
+                                <li>
+                                    <span class="check-icon"></span>
+                                    Wide coverage Wifi range 45 meters
+                                </li>
+                                <li>
+                                    <span class="check-icon"></span>
+                                    Easy setup and management sim-card
+                                </li>
+                                <li>
+                                    <span class="check-icon"></span>
+                                    64 Multiple device connectivity
+                                </li>
+                            </ul>
+                            <div class="product-price">
+                                <span class="price">240,000 TZS</span>
+                                <span class="deposit">Security deposit: 2 months</span>
+                            </div>
+                            <br>
+                            <br>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="featured-1" data-name="Atel DW516 5G CPE" data-price="240000">
+                                <br>
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+        
+                            </button>
+                        </div>
+                        <div class="product-image">
+                            <img src="images/atel-router.png" alt="Atel DW516 5G CPE">
+                            <div class="badge">Best Seller</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Products Section -->
+            <section id="products" class="products">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <h2>Our Products</h2>
+                        <p>Choose from our range of high-quality routers and business solutions</p>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card reveal fade-in-up">
+                            <div class="product-image">
+                                <img src="images/5g-router.png" alt="5G Router">
+                                <div class="video-play-overlay">
+                                    <button class="btn btn-icon btn-secondary watch-video-btn" data-video="5g" data-url="https://youtube.com/shorts/tTbmkL8-P54">
+                                        <i class="fas fa-play-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>5G Router</h3>
+                                <p>High-speed 5G router with wide coverage. Contract with only 2 months security deposit.</p>
+                                <p class="product-price">Monthly package 120,000 TZS</p>
+                            </div>
+                            <div class="product-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="product-1" data-name="5G Router" data-price="120000">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+          
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card reveal fade-in-up delay-100">
+                            <div class="product-image">
+                                <img src="images/4g-router.png" alt="4G Router">
+                                <div class="video-play-overlay">
+                                    <button class="btn btn-icon btn-secondary watch-video-btn" data-video="4g" data-url="https://youtu.be/5Rogz529bnQ">
+                                        <i class="fas fa-play-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3>4G Router</h3>
+                                <p>Reliable 4G router for stable connectivity. Contract with 2 months security deposit.</p>
+                                <p class="product-price">Monthly package 115,000 TZS</p>
+                            </div>
+                            <div class="product-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="product-2" data-name="4G Router" data-price="115000">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+          
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card reveal fade-in-up delay-200">
+                            <div class="product-image">
+                                <img src="images/master-airtime.png" alt="Master Airtime">
+                            </div>
+                            <div class="product-content">
+                                <h3>M2M:sms and Voice Packages</h3>
+                                <p>Perfect solution for small businesses and corporate clients to manage airtime distribution and SME packages or Bulk sms.</p>
+                                <p class="product-price">Custom pricing</p>
+                            </div>
+                            <div class="product-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="product-3" data-name="Master Airtime" data-price="100000">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+          
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card reveal fade-in-up delay-300">
+                            <div class="product-image">
+                                <img src="images/bulk-sms.png" alt="Bulk SMS">
+                            </div>
+                            <div class="product-content">
+                                <h3>Lipa Number</h3>
+                                <p>Affordable E-money solution to receive payments from customers via mobile money platforms like M-Pesa. It allows customers to send money directly to a merchant's mobile Till number, Takes only 24hrs .</p>
+                                <p class="product-price">Free Registration</p>
+                            </div>
+                            <div class="product-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="product-4" data-name="Bulk SMS" data-price="75000">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+          
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Packages Section -->
+            <section id="packages" class="packages">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <h2>Unlimited Packages</h2>
+                        <p>Interested on only packages to subcrible pre-paid we offer unlimited plans. Play games, watch TV with super speed internet at affordable prices.</p>
+                    </div>
+                    <div class="package-grid">
+                        <!-- 4G Packages -->
+                        <div class="package-card reveal fade-in-up" data-type="4G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>4G Basic</h3>
+                                    <span class="package-type">4G</span>
+                                </div>
+                                <p class="package-speed">Up to 5mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">50,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-secondary add-to-cart-btn" data-id="package-1" data-name="4G Basic Package" data-price="50000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card reveal fade-in-up" data-type="4G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>4G Standard</h3>
+                                    <span class="package-type">4G</span>
+                                </div>
+                                <p class="package-speed">Up to 10mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">70,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-secondary add-to-cart-btn" data-id="package-2" data-name="4G Standard Package" data-price="70000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card reveal fade-in-up" data-type="4G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>4G Premium</h3>
+                                    <span class="package-type">4G</span>
+                                </div>
+                                <p class="package-speed">Up to 20mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">115,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-secondary add-to-cart-btn" data-id="package-3" data-name="4G Premium Package" data-price="115000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card popular reveal fade-in-up" data-type="5G">
+                            <div class="popular-badge">Popular Choice</div>
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>5G Basic</h3>
+                                    <span class="package-type">5G</span>
+                                </div>
+                                <p class="package-speed">Up to 30mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">120,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="package-4" data-name="5G Basic Package" data-price="120000">Select Package</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-grid">
+                        <!-- 5G Packages -->
+                        <div class="package-card reveal fade-in-up" data-type="5G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>5G Standard</h3>
+                                    <span class="package-type">5G</span>
+                                </div>
+                                <p class="package-speed">Up to 50mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">150,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="package-5" data-name="5G Standard Package" data-price="150000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card reveal fade-in-up" data-type="5G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>5G Premium</h3>
+                                    <span class="package-type">5G</span>
+                                </div>
+                                <p class="package-speed">Up to 100mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">250,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="package-6" data-name="5G Premium Package" data-price="250000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card reveal fade-in-up" data-type="5G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>5G Pro</h3>
+                                    <span class="package-type">5G</span>
+                                </div>
+                                <p class="package-speed">Up to 200mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">400,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="package-7" data-name="5G Pro Package" data-price="400000">Select Package</button>
+                            </div>
+                        </div>
+                        <div class="package-card reveal fade-in-up" data-type="5G">
+                            <div class="package-header">
+                                <div class="package-title">
+                                    <h3>5G Ultimate</h3>
+                                    <span class="package-type">5G</span>
+                                </div>
+                                <p class="package-speed">Up to 350mbps</p>
+                            </div>
+                            <div class="package-content">
+                                <div class="package-price">
+                                    <span class="price">600,000 TZS</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <ul class="package-features">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        Unlimited data
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24/7 support
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        24 month contract free device
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-footer">
+                                <button class="btn btn-primary add-to-cart-btn" data-id="package-8" data-name="5G Ultimate Package" data-price="600000">Select Package</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Benefits Section -->
+            <section class="benefits">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <h2>Why Choose Us</h2>
+                        <p>We ensure unlimited internet at an affordable price guaranteeing your family entertainment</p>
+                    </div>
+                    <div class="benefits-grid reveal fade-in-up">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Super Fast Speed</h3>
+                            <p>Experience lightning-fast internet speeds with our 5G technology</p>
+                        </div>
+                        <div class="benefit-card reveal fade-in-up delay-100">
+                            <div class="benefit-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3>Affordable Pricing</h3>
+                            <p>We offer value for your money with competitive pricing</p>
+                        </div>
+                        <div class="benefit-card reveal fade-in-up delay-200">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Reliable Service</h3>
+                            <p>Consistent and dependable internet connection for your needs</p>
+                        </div>
+                        <div class="benefit-card reveal fade-in-up delay-300">
+                            <div class="benefit-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>24/7 Support</h3>
+                            <p>Our dedicated team is always ready to assist you</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section (Let us call you back) -->
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <h2>Let Us Call You Back</h2>
+                        <p>Leave your details and we'll get in touch with you as soon as possible.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-info reveal fade-in-right">
+                            <h3>Get in Touch</h3>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>0753221868</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@mema.co.tz</span>
+                                </div>
+                            </div>
+                            <div class="business-hours">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday - 9:00 AM - 2:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        <div class="contact-form-container reveal fade-in-left">
+                            <h3>Request a Callback</h3>
+                            <form class="contact-form" id="callback-form">
+                                <div class="form-group">
+                                    <label for="callback-name">Full Name</label>
+                                    <input type="text" id="callback-name" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="callback-location">Location</label>
+                                    <input type="text" id="callback-location" name="location" placeholder="Your location" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="callback-phone">Phone Number</label>
+                                    <input type="tel" id="callback-phone" name="phone" placeholder="Your phone number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="callback-email">Email Address</label>
+                                    <input type="email" id="callback-email" name="email" placeholder="Your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="callback-message">Order/Message</label>
+                                    <textarea id="callback-message" name="message" rows="4" placeholder="Tell us what you're interested in"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="callback-btn">Call Me Back</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Office Location -->
+            <section class="office-location">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <h2>Our Office</h2>
+                        <p>Visit us at our office location for in-person assistance</p>
+                    </div>
+                    <div class="location-container">
+                        <div class="location-info reveal fade-in-up">
+                            <h3>Vodacom Business - partner MEMA Holdings</h3>
+                            <p>We are located at Dora Tower, Bamaga Sheli, Ground Floor</p>
+                            <a href="https://maps.app.goo.gl/GKzwBb7rgTB1fnvn8" target="_blank" rel="noopener noreferrer" class="map-link">
+                                <i class="fas fa-map-marker-alt"></i>
+                                View on Google Maps
+        
+                            </a>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9598830721184!2d39.2329458!3d-6.7693913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b0a2e3bd1e3%3A0x7e8be3e0a1c1d1a1!2sDora%20Tower!5e0!3m2!1sen!2stz!4v1617293456789!5m2!1sen!2stz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MEMA holdings Office Location"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-company">
+                        <img src="images/vodacom-logo-white.png" alt="Vodacom Logo" class="footer-logo">
+                        <p>Vodacom Tanzania is a leading provider of mobile telecommunications, offering voice, data, and converged services to over 15 million customers. Partner: MEMA Holdings</p>
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/people/Vodacom-Unlimited-Certified-partner-MEMA/61574782637469/" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/VodacomUnlimted" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Products</h3>
+                        <ul>
+                            <li>
+                                <a href="#products">5G Routers</a>
+                            </li>
+                            <li>
+                                <a href="#products">4G Routers</a>
+                            </li>
+                            <li>
+                                <a href="#products">voice and SMS</a>
+                            </li>
+                            <li>
+                                <a href="#products">Lipa Number</a>
+                            </li>
+                            <li>
+                                <a href="speedtest.html">Speed Test</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Packages</h3>
+                        <ul>
+                            <li>
+                                <a href="#packages">4G Packages</a>
+                            </li>
+                            <li>
+                                <a href="#packages">5G Packages</a>
+                            </li>
+                            <li>
+                                <a href="#packages">Business Solutions</a>
+                            </li>
+                            <li>
+                                <a href="#packages">Enterprise Plans</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Custom Solutions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Support</h3>
+                        <ul>
+                            <li>
+                                <a href="#contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="https://vodacom.co.tz/fwa">Network Coverage</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy;<span id="current-year"></span>
+                        All rights reserved. MEMA Holdings limited
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+        <!-- Chatbot -->
+        <div class="chatbot-button">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>Mema Assistant Bot</h3>
+                <button class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="chat-message bot">
+                    <div class="chat-bubble">Hello! I'm your Mema assistant. How can I help you today?
+      </div>
+                    <div class="chat-time">Just now</div>
+                </div>
+                <div class="chatbot-options">
+                    <div class="chatbot-option">Package Information</div>
+                    <div class="chatbot-option">Router Setup</div>
+                    <div class="chatbot-option">Billing Questions</div>
+                    <div class="chatbot-option">Technical Support</div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="Type your message here...">
+                <button class="chatbot-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+		<!-- Overlay -->
+<div class="overlay"></div>
+</main>
+<!-- Scripts -->
+        <script src="script.js"></script>
+
+<script src="js/wave-animation.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loadingOverlay = document.getElementById('loading-overlay');
+  const contentWrapper = document.querySelector('.content-wrapper');
+
+  // Simulate loading time (replace with your actual loading checks)
+  setTimeout(function() {
+    loadingOverlay.classList.add('fade-out');
+    contentWrapper.classList.add('loaded');
+
+    // Optional: Remove the loading overlay from the DOM after it fades out
+    setTimeout(function() {
+      loadingOverlay.style.display = 'none';
+    }, 500); // Matches the fade-out transition duration
+  }, 2000); // Adjust the timeout to match your actual loading time or conditions
+});
+</script>
+    </body>
+</html>

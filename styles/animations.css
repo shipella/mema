@@ -1,0 +1,240 @@
+/* Animation Styles */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes modernSpeedAnimation {
+  0% {
+    width: 30%;
+    background: linear-gradient(to right, #10b981, #10b981);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  }
+  40% {
+    width: 30%;
+    background: linear-gradient(to right, #10b981, #10b981);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  }
+  60% {
+    width: 90%;
+    background: linear-gradient(to right, #10b981, #3b82f6, #8b5cf6);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  }
+  80% {
+    width: 90%;
+    background: linear-gradient(to right, #10b981, #3b82f6, #8b5cf6);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  }
+  100% {
+    width: 30%;
+    background: linear-gradient(to right, #10b981, #10b981);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  }
+}
+
+@keyframes speedValueAnimation {
+  0% {
+    right: 70%;
+  }
+  40% {
+    right: 70%;
+  }
+  60% {
+    right: 10%;
+  }
+  80% {
+    right: 10%;
+  }
+  100% {
+    right: 70%;
+  }
+}
+
+
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  transform: translateX(-30px);
+}
+
+.fade-in-right {
+  transform: translateX(30px);
+}
+
+.fade-in-up {
+  transform: translateY(30px);
+}
+
+.fade-in-down {
+  transform: translateY(-30px);
+}
+
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.delay-500 {
+  transition-delay: 0.5s;
+}
+
+/* Floating Animation */
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+.pulsing {
+  animation: pulse 2s infinite;
+}
+
+/* Bounce Animation */
+.bouncing {
+  animation: bounce 2s infinite;
+}
+
+
+
+/* Animated Gradient Background */
+.gradient-bg {
+  background: linear-gradient(-45deg, #dc2626, #991b1b, #ef4444, #b91c1c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
